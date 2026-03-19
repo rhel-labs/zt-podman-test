@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+echo "Validated module called module-03" >> /tmp/progress.log
+
 # Validate pod deployment module
 
 # Check if pod exists
@@ -53,4 +55,3 @@ if ! curl -s -f http://localhost:8080 > /dev/null; then
 fi
 
 echo "PASS: Podman pod deployed successfully with database and web application"
-exit 0

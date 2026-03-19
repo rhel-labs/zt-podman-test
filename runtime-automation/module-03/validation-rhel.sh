@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+echo "Validated module called module-03" >> /tmp/progress.log
 # Validate Containerfile module
 
 # Check if webapp directory exists
@@ -30,4 +31,3 @@ if [ ! -f "/home/rhel/webapp/app.py" ]; then
 fi
 
 echo "PASS: Container image built successfully"
-exit 0

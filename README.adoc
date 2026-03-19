@@ -1,38 +1,104 @@
-= Podman Fundamentals Lab
+=== Getting Started
 
-This lab teaches the fundamentals of using Podman for container management on Red Hat Enterprise Linux.
+* Create a git repo from this template
+* Clone the repo and *cd* into it
 
-== Lab Overview
+=== Understanding the Basic Template Directory Structure
 
-This hands-on lab covers:
+. Content Directory
++
+.tree output
+[source,shell]
+----
+.
+├── README.adoc                 # Readme file
+├── config                      # Defines VMs, network and firewall
+├── runtime-automation          # Scripts directory for setup/next/solve modules 
+├── setup-automation            # Scripts directory when provisioning
+├── ui-config.yml               # Configuration file
+├── site.yml                    # Theme config
+└── content                     # Content directory
+    ├── antora.yml              # Antora configuration file. You can add "inline vars" here to render within your content
+    └── modules/ROOT
+        ├── assets
+        │   └── images                       # Images used in your content 
+        │       └── example-image.png
+        ├── pages                            # Your content goes here
+        │   ├── module-01.adoc               # First module of your lab, e.g. overview etc 
+        │   ├── module-02.adoc               # Second module of your lab  
+        │   └── module-03.adoc               # Third module
+----
 
-* Installing and verifying Podman on RHEL
-* Building custom container images using Containerfiles
-* Creating and managing Podman pods
-* Deploying multi-container applications
+. Lab definition directory
++
+.tree output
+[source,shell]
+----
+config/
+├── firewall.yaml                           # Define the egress/ingress rules to be allowed
+├── instances.yaml                          # Define the instances to be created
+└── networks.yml                            # Define the networks to be created
+----
 
-== Prerequisites
 
-* Basic understanding of Linux command line
-* Familiarity with container concepts (helpful but not required)
+. Runtime Scripts Directory Structure
++
+.tree output
+[source,shell]
+----
+runtime-automation/
+├── module_1                            # The directory name should be the same as 
+│                                       # the module content page name
+│   ├── setup.sh                        # Setup playbook which run at start of module 
+│                                       # and when clicked on next button
+│   ├── solve.sh                        # Solve playbook, run when clicked on solve button
+│   └── validation.sh                   # Validation playbook, run when click on next button
+├── ansible.cfg                         # Ansible configuration used with module playbooks
+└── main.yml                            # Playbook to be called in each step
+----
 
-== Lab Modules
+. Setup Scripts Directory Structure
++
+.tree output
+[source,shell]
+----
+setup-automation/
+├── setup-vmname.sh                     # Script to be executed on vmname when is provisioned
+├── ansible.cfg                         # Ansible configuration used with module playbooks
+└── main.yml                            # Playbook to be called in each step
+----
 
-1. *Introduction to Podman* - Learn about Podman and its benefits
-2. *Installing Podman* - Install and verify Podman on RHEL
-3. *Building Container Images* - Create custom images with Containerfiles
-4. *Deploying a Podman Pod* - Run a multi-tier application using pods
 
-== Estimated Time
+== Understanding UI Configration file
+. Example: The *ui-config.yml* configuration file
++
+.tree output
+[source,shell]
+----
+antora:
+  name: modules
+  dir: www
+  modules:
+    - name: 01-playbook-inventory               # Module Name
+      label: Playbook Inventory                 # Module Label
+      solveButton: true                         # Enable Solve button
+    - name: 02-playbook-directory-structure
+      label: Playbook Directory Structure
+      solveButton: true
+tabs:
+  - name: VSCode Editor                         # Tab name
+    port: 8443                                  # Port no of the service
+    path: /?folder=/home/rhel/ansible-files/    # Path suffix
+  - name: ">_control"                           # Tab name
+    port: 443                                   # Port of the tt1 terminal
+    path: /tty1                                 # Path to the tty1 terminal
+----
 
-35 minutes
+=== Development Cycle
 
-== Lab Environment
+. Edit your content in `content/modules/ROOT/pages/`
+. Use `git` to branch and commit your work
+. Push your work to your repo
+.. You should use `git tags` or `git branches` in production
+.. However development items default to the head of `main`
 
-* Red Hat Enterprise Linux 10
-* Podman (latest version)
-* Access to Red Hat container registries
-
-== Getting Started
-
-Once your lab environment is provisioned, follow the modules in order to learn Podman fundamentals.

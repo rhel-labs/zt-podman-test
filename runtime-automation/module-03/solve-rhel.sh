@@ -1,5 +1,5 @@
-#!/bin/bash
-# Solve script for Containerfile module
+#!/bin/sh
+echo "Solved module called module-03" >> /tmp/progress.log
 
 cd /home/rhel/webapp || exit 1
 
@@ -81,4 +81,3 @@ podman rm webapp-test
 echo ""
 
 echo "=== Module completed successfully ==="
-exit 0

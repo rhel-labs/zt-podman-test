@@ -1,5 +1,6 @@
-#!/bin/bash
-# Solve script for pod deployment module
+#!/bin/sh
+echo "Solved module called module-03" >> /tmp/progress.log
+
 
 cd /home/rhel/webapp || exit 1
 
@@ -95,4 +96,3 @@ echo "Kubernetes YAML saved to webapp-pod.yaml"
 echo ""
 
 echo "=== Module completed successfully ==="
-exit 0

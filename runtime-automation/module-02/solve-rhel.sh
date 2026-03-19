@@ -1,6 +1,5 @@
-#!/bin/bash
-# Solve script for install module
-
+#!/bin/sh
+echo "Solved module called module-02" >> /tmp/progress.log
 echo "=== Solution for Installing Podman ==="
 echo ""
 echo "Step 1: Check Podman version"
@@ -20,4 +19,3 @@ podman info --format "{{.Store.GraphRoot}}"
 echo ""
 
 echo "=== Module completed successfully ==="
-exit 0

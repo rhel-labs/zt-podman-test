@@ -1,7 +1,5 @@
-#!/bin/bash
-# Validate Podman installation
-
-# Check if podman is installed
+#!/bin/sh
+echo "Validated module called module-02" >> /tmp/progress.log
 if ! command -v podman &> /dev/null; then
     echo "FAIL: Podman is not installed"
     echo "HINT: Run 'dnf install podman' to install Podman"
@@ -16,4 +14,3 @@ if ! podman images | grep -q "ubi9/ubi-minimal"; then
 fi
 
 echo "PASS: Podman is installed and working correctly"
-exit 0

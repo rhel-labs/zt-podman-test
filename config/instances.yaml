@@ -4,7 +4,7 @@ virtualmachines:
     image: "rhel-10-0-07-09-25-3"
     bootloader: efi
     memory: "4G"
-    cores: 2
+    cores: 1
     image_size: "40G"
     tags:
       - key: "AnsibleGroup"
@@ -15,3 +15,18 @@ virtualmachines:
       - podman
       - buildah
       - skopeo
+# For cockpit
+#    services:
+#      - name: cockpit
+#        ports:
+#          - port: 9090
+#            protocol: TCP
+#            targetPort: 9090
+#            name: cockpit
+#    routes:
+#      - name: cockpit
+#        host: cockpit
+#        service: cockpit
+#        targetPort: 9090
+#        tls: true
+#        tls_termination: Edge

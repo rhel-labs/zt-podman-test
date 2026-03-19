@@ -1,0 +1,44 @@
+= Introduction to Podman
+
+== What is Podman?
+
+Podman is a daemonless container engine for developing, managing, and running OCI Containers on your Linux System. Unlike Docker, Podman doesn't require a background daemon process, which provides several security and architectural advantages.
+
+Key features of Podman include:
+
+* *Daemonless architecture* - No background service required
+* *Rootless containers* - Run containers as a non-root user
+* *Pod support* - Native support for Kubernetes-style pods
+* *Docker compatibility* - Can use Docker commands and Dockerfiles
+* *Systemd integration* - Generate systemd units for containers
+
+== Why Use Podman on RHEL?
+
+Red Hat Enterprise Linux includes Podman as the default container engine, providing:
+
+* Enterprise support and security updates
+* Integration with Red Hat's container ecosystem
+* SELinux integration for enhanced security
+* Long-term stability and compatibility
+
+[TIP]
+====
+Podman uses the same command-line syntax as Docker. If you're familiar with Docker, you can often just alias `docker=podman` and continue using your existing workflows!
+====
+
+== What You'll Learn
+
+In this lab, you will:
+
+1. *Install Podman* - Set up Podman and verify the installation
+2. *Build Container Images* - Create custom images using Containerfiles
+3. *Deploy a Pod* - Run a multi-container application using Podman pods
+
+By the end of this lab, you'll understand how to use Podman for real-world container workloads on RHEL.
+
+[NOTE]
+====
+This lab uses Red Hat Enterprise Linux 10, which includes the latest version of Podman with enhanced features and performance improvements.
+====
+
+Let's get started!

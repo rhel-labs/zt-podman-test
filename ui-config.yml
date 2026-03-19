@@ -1,0 +1,21 @@
+---
+antora:
+  name: modules
+  dir: www
+  modules:
+    - name: 01-introduction
+      label: "Introduction to Podman"
+      solveButton: false
+    - name: 02-install
+      label: "Installing Podman"
+      solveButton: true
+    - name: 03-containerfile
+      label: "Building Container Images"
+      solveButton: true
+    - name: 04-pod-deploy
+      label: "Deploying a Podman Pod"
+      solveButton: true
+
+tabs:
+  - name: ">_ terminal"
+    url: /wetty

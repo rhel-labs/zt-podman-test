@@ -1,0 +1,20 @@
+---
+site:
+  title: "Podman Fundamentals"
+  url: https://github.com/rhpds/showroom_template_zero
+  start_page: modules::01-introduction.adoc
+
+content:
+  sources:
+    - url: ./
+      start_path: content
+ui:
+  bundle:
+    url: https://github.com/redhat-scholar/course-ui/releases/latest/download/ui-bundle.zip
+    snapshot: true
+
+output:
+  dir: ./www/www
+
+runtime:
+  cache_dir: ./.cache/antora

@@ -1,0 +1,38 @@
+= Podman Fundamentals Lab
+
+This lab teaches the fundamentals of using Podman for container management on Red Hat Enterprise Linux.
+
+== Lab Overview
+
+This hands-on lab covers:
+
+* Installing and verifying Podman on RHEL
+* Building custom container images using Containerfiles
+* Creating and managing Podman pods
+* Deploying multi-container applications
+
+== Prerequisites
+
+* Basic understanding of Linux command line
+* Familiarity with container concepts (helpful but not required)
+
+== Lab Modules
+
+1. *Introduction to Podman* - Learn about Podman and its benefits
+2. *Installing Podman* - Install and verify Podman on RHEL
+3. *Building Container Images* - Create custom images with Containerfiles
+4. *Deploying a Podman Pod* - Run a multi-tier application using pods
+
+== Estimated Time
+
+35 minutes
+
+== Lab Environment
+
+* Red Hat Enterprise Linux 10
+* Podman (latest version)
+* Access to Red Hat container registries
+
+== Getting Started
+
+Once your lab environment is provisioned, follow the modules in order to learn Podman fundamentals.

@@ -1,0 +1,19 @@
+lab:
+  name: "Podman Fundamentals"
+  shortname: "zt-podman-test"
+  maintainer: "Nate Lager (nlager@redhat.com)"
+
+  description:
+    summary: "Learn how to use Podman for container management on Red Hat Enterprise Linux"
+    goal: "After completing this lab, users will be able to install Podman, build container images, and deploy multi-container applications using pods."
+    concepts:
+     - "Install and configure Podman on RHEL"
+     - "Build container images using Containerfiles"
+     - "Create and manage Podman pods"
+     - "Deploy a multi-tier application with containers"
+    use_case: "In this lab, you will learn the fundamentals of container management using Podman on Red Hat Enterprise Linux. You'll start by installing Podman and understanding its architecture, then progress to building custom container images using Containerfiles. Finally, you'll deploy a complete web application with a database backend using Podman pods, demonstrating how to orchestrate multiple containers as a single unit."
+    time_to_complete: "35"
+
+  git_ref:
+    production: "prod"
+    development: "dev"

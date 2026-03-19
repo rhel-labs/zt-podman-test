@@ -1,7 +1,7 @@
 #!/bin/bash
 # Solve script for pod deployment module
 
-cd /root/webapp || exit 1
+cd /home/rhel/webapp || exit 1
 
 echo "=== Solution for Deploying a Podman Pod ==="
 echo ""
